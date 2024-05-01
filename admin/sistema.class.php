@@ -192,9 +192,9 @@ class Sistema extends Config
         $mail->Port = 465;
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $mail->SMTPAuth = true;
-        $mail->Username = '20030373@itcelaya.edu.mx';
-        $mail->Password = 'epybnbyjnfkngcxm';
-        $mail->setFrom('20030373@itcelaya.edu.mx', 'Ana Karen Vargas Hernandez');
+        $mail->Username = 'micorreo';
+        $mail->Password = 'micontrasena';
+        $mail->setFrom('micorreo', 'Elsa pato');
         $mail->addAddress($destinatario, $nombre_persona);
         $mail->Subject = $asunto;
         $mail->msgHTML($mensaje);
