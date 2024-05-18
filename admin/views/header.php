@@ -45,6 +45,19 @@
                             <li><a class="dropdown-item" href="privilegios.php">Privilegios</a></li>
                         </ul>
                     </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="cart.php">orders</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="orders.php">ver carrito</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="login.php?action=logout">Pedidos</a>
+                    </li>
+
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="login.php?action=logout">Logout</a>
                     </li>

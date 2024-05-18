@@ -141,6 +141,12 @@ class Sistema extends Config
         }
         return false;
     }
+
+    public function checkEmail($correo)
+    {
+        return filter_var($correo, FILTER_VALIDATE_EMAIL);
+    }
+
     function reset($correo){
         if (filter_var($correo, FILTER_VALIDATE_EMAIL)) {
             $this->connect();
@@ -192,9 +198,9 @@ class Sistema extends Config
         $mail->Port = 465;
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $mail->SMTPAuth = true;
-        $mail->Username = 'micorreo';
-        $mail->Password = 'micontrasena';
-        $mail->setFrom('micorreo', 'Elsa pato');
+        $mail->Username = '18031402@itcelaya.edu.mx';
+        $mail->Password = 'zpgVQBkUUKBr';
+        $mail->setFrom('18031402@itcelaya.edu.mx', 'Elsa pato');
         $mail->addAddress($destinatario, $nombre_persona);
         $mail->Subject = $asunto;
         $mail->msgHTML($mensaje);
@@ -290,5 +296,14 @@ class Sistema extends Config
             return false;
         }
     }
+
+    public function validateEmail($email) {
+        if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
 
 }

@@ -1,4 +1,6 @@
-<form action="login.php?action=login" method="post">
+//<form action="login.php?action=login" method="post">
+
+<form action="login.perfil.php?action=login" method="post">
     
     <!-- Email input -->
     <div class="form-outline mb-4">

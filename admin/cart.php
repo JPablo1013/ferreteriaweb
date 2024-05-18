@@ -1,13 +1,12 @@
 <?php
-error_reporting(0);
-
-session_start();
-$id_producto = isset($_GET["id_producto"]) ? $_GET("id_producto") : die("Error, producto no encontrado");
-$cantidad = isset($_GET["cantidad"]) ?$_GET("cantidad") : die("Error, cantidad no encontrado");
-if(isset($_SESSION[('cart')])){
-    $_SESSION['cart'] = array();
-    $_SESSION['cart'][$id_producto] = $cantidad;
+//session_start();
+include __DIR__ . '/admin/productos.class.php';
+include __DIR__ . '/header.php';
+$web = new Productos();
+$productos = array();
+$productos = $web->getAll();
+$carrito = array();
+if (isset($_SESSION['cart'])) {
+    $carrito = $_SESSION['cart'];
 }
-$_SESSION('cart')[$id_producto];
-header()
-?>
+include __DIR__ . '/views/cart/index.php';
